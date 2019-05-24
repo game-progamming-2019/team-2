@@ -3,14 +3,30 @@ extends KinematicBody2D
 signal Player_position
 ## Scenes which can be instantiated
 var Notification = load("res://Player/Notifications/Notification.tscn")
-# friction
+
 var direction:Vector2 = Vector2()
 var velocity:Vector2 = Vector2()
+
 export var SPEED: int
+# milliseconds needed to reach maximum speed
+export var ACCELERATION: float
+export var RUNSPEED_MULTIPLIER: float
 export var GRAVITY: int
-var _apply_gravity: bool = true
+
 var _jump_value: float = 1
+
+var _state: String
+var lock = true
+var _in_air: bool
+var _apply_gravity: bool = true
+var _is_running: bool
 var _jumping: bool = false
+	
+#Signal handler
+func _on_Coin_collected():
+	var notification = Notification.instance()
+	self.add_child(notification)
+	notification.init("Coin Collected")
 	
 func check_if_gravity_should_be_applied():
 	#List of Conditions
@@ -18,21 +34,11 @@ func check_if_gravity_should_be_applied():
 		_apply_gravity = false
 	else:
 		_apply_gravity = true
-	
-func setVelocity(delta):
-	getInput()
-	jump(delta)
-	#Reset Velocity Vector
-	self.velocity = Vector2.ZERO
-	self.velocity.x = self.direction.x * self.SPEED
-	applyGravity()
-	
-func applyGravity():
-	
-	check_if_gravity_should_be_applied()
 		
+func applyGravity():
+	check_if_gravity_should_be_applied()
 	if self.direction.y != 0:
-		self.velocity.y = self.direction.y * self.SPEED
+		return
 	else:
 		if _apply_gravity:
 			self.velocity.y = self.GRAVITY
@@ -41,18 +47,25 @@ func applyGravity():
 
 func getInput():
 	direction = Vector2(0,0)
-	if Input.is_key_pressed(KEY_RIGHT):
+	if Input.is_key_pressed(KEY_D):
+		self._state = "Moving"
 		direction.x = 1
-		$"Spieler - Sprite"/AnimationPlayer.play("Right")
-	elif Input.is_key_pressed(KEY_LEFT):
+		#$"Spieler - Sprite"/AnimationPlayer.play("Right")
+	elif Input.is_key_pressed(KEY_A):
+		self._state = "Moving"
 		direction.x = -1
-		$"Spieler - Sprite"/AnimationPlayer.play("Left")
+		#$"Spieler - Sprite"/AnimationPlayer.play("Left")
 	else:
+		self._state = "Standing"
 		direction.x = 0
-		$"Spieler - Sprite"/AnimationPlayer.stop()
+		#$"Spieler - Sprite"/AnimationPlayer.stop()
+	if Input.is_key_pressed(KEY_SHIFT):
+		self._is_running = true
+	else:
+		self._is_running = false
 		
 func jump(delta):
-	if self.is_on_floor() && Input.is_key_pressed(KEY_UP):
+	if self.is_on_floor() && Input.is_key_pressed(KEY_SPACE):
 		self._jumping = true
 	if self._jumping == true:
 		# Mathematical function, which is ran from 1 to -1
@@ -61,16 +74,45 @@ func jump(delta):
 		if self.is_on_floor() && _jump_value < 0.8:
 			self._jumping = false
 			self._jump_value = 1
-		
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
-	setVelocity(delta)
-	var snap = Vector2.UP * 32 if !_jumping else Vector2.ZERO
-	move_and_slide_with_snap(self.velocity, snap, Vector2.UP)
+			self.lock = true
+		if self.is_on_ceiling() && self.lock:
+			self.lock = false
+			self._jump_value =  -self._jump_value
+
+func setVelocity():
+	if self._state == "Standing" && !self._in_air:
+		self.velocity = Vector2.ZERO
+	if self._is_running:
+		self.velocity.x += (self.direction.x * ( self.SPEED * self.ACCELERATION )) * self.RUNSPEED_MULTIPLIER
+	else:
+		self.velocity.x += self.direction.x * ( self.SPEED * self.ACCELERATION )
+	self.velocity.y = self.direction.y * self.SPEED
+	if abs(self.velocity.x) > self.SPEED && !self._is_running && self._state == "Moving":
+		self.velocity.x = self.direction.x * self.SPEED
+	elif (abs(self.velocity.x) > self.SPEED * self.RUNSPEED_MULTIPLIER) && self._is_running:
+		self.velocity.x = self.direction.x * self.SPEED * self.RUNSPEED_MULTIPLIER
+	elif self._state == "Standing" && self._in_air && (abs(self.velocity.x) > self.SPEED) && !self._is_running:
+		if self.velocity.x <= 0:
+			self.velocity.x = -self.SPEED
+		else:
+			self.velocity.x = self.SPEED
+
+func applyMovement(delta:float):
+	getInput()
+	jump(delta)
+	setVelocity()
+	applyGravity()
+	
+	#print(self.velocity.x)
+	
+	#var snap = Vector2.UP * 32 if !_jumping else Vector2.ZERO
+	#move_and_slide_with_snap(self.velocity, snap, Vector2.UP)
+	
+	move_and_slide(self.velocity, Vector2.UP)
 	emit_signal("Player_position", self.position)
 	
-#Signal handler
-func _on_Coin_collected():
-	var notification = Notification.instance()
-	self.add_child(notification)
-	notification.init("Coin Collected")
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _physics_process(delta):
+	self._in_air = !self.is_on_floor()
+	applyMovement(delta)
+	

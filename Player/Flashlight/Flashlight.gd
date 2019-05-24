@@ -8,7 +8,7 @@ func toggle(delta):
 		_toggle_timer -= delta
 		if self._toggle_timer < 0:
 			_toggle_timer = 1.0
-	if Input.is_key_pressed(KEY_F) && self._toggle_timer == 1.0:
+	if Input.is_mouse_button_pressed(BUTTON_LEFT) && self._toggle_timer == 1.0:
 		self._on = !self._on
 		self._toggle_timer -= 0.01
 
