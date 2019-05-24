@@ -1,0 +1,153 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Environment/TileMap/tileset.png" type="Texture" id=1]
+[ext_resource path="res://Environment/TileMap/CollisionPolygon2D.gd" type="Script" id=2]
+
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64.112, 64.0965 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 64.9817, 37.3342 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Tile" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 384, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 133.579, -169.417 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 384, 256, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 326.617, -75.7491 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 768, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile3/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 326.617, -75.7491 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 640, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile4/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile5" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 326.617, -75.7491 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 128, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile5/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Tile6" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 326.617, -75.7491 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 512, 896, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Tile6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile6/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Triangle - Tile" type="Sprite" parent="."]
+position = Vector2( 425.617, -129.749 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 384, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Triangle - Tile"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Triangle - Tile/StaticBody2D"]
+polygon = PoolVector2Array( -63.9489, 64.1192, 64.0576, 63.9783, 64.0614, -63.7949 )
+script = ExtResource( 2 )
+
+[node name="Triangle - Tile2" type="Sprite" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 384, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Triangle - Tile2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Triangle - Tile2/StaticBody2D"]
+polygon = PoolVector2Array( -63.9489, 64.1192, 64.0576, 63.9783, 64.0614, -63.7949 )
+
+[node name="Small - Tile" type="Sprite" parent="."]
+position = Vector2( -213.401, -101.813 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 640, 896, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Small - Tile"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Small - Tile/StaticBody2D"]
+position = Vector2( -0.167419, -27.6932 )
+shape = SubResource( 2 )
+
+[node name="Small - Tile2" type="Sprite" parent="."]
+position = Vector2( -93.0545, -278.441 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 128, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Small - Tile2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Small - Tile2/StaticBody2D"]
+position = Vector2( -0.167419, -27.6932 )
+shape = SubResource( 2 )
+
+[node name="Small - Tile3" type="Sprite" parent="."]
+position = Vector2( -93.0545, -278.441 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 768, 0, 128, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Small - Tile3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Small - Tile3/StaticBody2D"]
+position = Vector2( -0.167419, -27.6932 )
+shape = SubResource( 2 )

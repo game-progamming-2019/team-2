@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player/Spieler.gd" type="Script" id=1]
+[ext_resource path="res://Player/Link.png" type="Texture" id=2]
+[ext_resource path="res://Player/Flashlight/Flashlight.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 30.4068
+height = 30.8411
+
+[sub_resource type="Animation" id=2]
+resource_name = "Left"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 50, 59 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Right"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 70, 79 ]
+}
+
+[node name="Spieler" type="KinematicBody2D"]
+collision/safe_margin = 3.0
+script = ExtResource( 1 )
+SPEED = 303
+GRAVITY = 650
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.2274, 0.269409 )
+shape = SubResource( 1 )
+
+[node name="Spieler - Sprite" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 10
+frame = 54
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Spieler - Sprite"]
+anims/Left = SubResource( 2 )
+anims/Right = SubResource( 3 )
+
+[node name="Taschenlampe" parent="." instance=ExtResource( 3 )]
+position = Vector2( -9.99997, 12.1052 )
+scale = Vector2( 1.48027, 1.54605 )
