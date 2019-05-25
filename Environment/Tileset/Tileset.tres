@@ -89,7 +89,7 @@ points = PoolVector2Array( 35, 35, -35, 35, 35, -35 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 7 ),
-"shape_transform": Transform2D( -3.61999e-06, 1, -1, -3.61999e-06, 35, 35 )
+"shape_transform": Transform2D( -3.61999e-006, 1, -1, -3.61999e-006, 35, 35 )
 } ]
 3/z_index = 0
 4/name = "Pfeil"
