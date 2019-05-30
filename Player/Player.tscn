@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Player/Flashlight/Flashlight.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Run.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20.4452, 70.8253 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Rechts"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 9 ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+collision/safe_margin = 0.001
+script = ExtResource( 1 )
+SPEED = 400
+RUNSPEED_MULTIPLIER = 2.0
+GRAVITY = 600
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Taschenlampe" parent="." instance=ExtResource( 2 )]
+position = Vector2( 18.3453, 14.4853 )
+scale = Vector2( 1.48027, 1.54605 )
+
+[node name="Player" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+vframes = 3
+hframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+anims/Rechts = SubResource( 2 )

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player/Flashlight/Flashlight.png" type="Texture" id=1]
+[ext_resource path="res://Player/Flashlight/Flashlight.gd" type="Script" id=2]
+[ext_resource path="res://Player/Flashlight/light2.jpg" type="Texture" id=3]
+
+[node name="Sprite" type="Sprite"]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 266.16, 1.0148 )
+rotation = -1.5708
+scale = Vector2( 0.713179, 1 )
+texture = ExtResource( 3 )
