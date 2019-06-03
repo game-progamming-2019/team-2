@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Level/Level_1/level.gd" type="Script" id=1]
+[ext_resource path="res://Level/Level_1/Tileset/Tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Level/Level_1/background.png" type="Texture" id=3]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 80, 420, 0, 0, 0, 0, 1000, 430 )
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 36.4585, 511.473 )
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 1 )
+CAMERASPEED = 100.0
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( -327659, 1, 0, -262124, 1, 0, -262123, 1, 0, -196589, 1, 0, -196587, 1, 0, -131054, 1, 0, -131051, 1, 0, -65515, 1, 0, 21, 1, 0, 65557, 1, 0, 131093, 1, 0, 458759, 4, 0, 458766, 4, 0, 458782, 4, 0, 458791, 5, 0, 524288, 1, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524307, 1, 0, 524308, 1, 0, 524309, 1, 0, 524310, 1, 0, 524311, 1, 0, 524312, 1, 0, 524313, 1, 0, 524314, 1, 0, 524315, 1, 0, 524316, 1, 0, 524317, 1, 0, 524318, 1, 0, 524319, 1, 0, 524320, 1, 0, 524321, 1, 0, 524322, 1, 0, 524323, 1, 0, 524324, 1, 0, 524325, 1, 0, 524326, 1, 0, 524327, 1, 0 )
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( -125.79, 0 )
+scale = Vector2( 2.57237, 1 )
+curve = SubResource( 1 )
+
+[node name="CameraPath" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 80, 420 )
+rotation = 0.0108806
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 1281.79, 86.2645 )
+scale = Vector2( 2.00212, 1.36919 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 2528.78, 75.228 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
