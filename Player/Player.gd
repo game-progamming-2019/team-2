@@ -13,17 +13,46 @@ export var ACCELERATION: float = 0.09
 export var RUNSPEED_MULTIPLIER: float
 export var GRAVITY: int
 
-var _jump_value: float = 1
+export var HEAL_MULTIPLIER: float = 0.5
+export var DAMAGE_MULTIPLIER: float = 0.5
+var _hp: float = 3
+var _max_hp: float = 3
+export var energie = 100
+export var coins = 0
 
+#Movement
+var _jump_value: float = 1
 var _state: String
-var lock = true
+var _lock = true
 var _in_air: bool
 var _apply_gravity: bool = true
 var _is_running: bool
 var _jumping: bool = false
 	
+	
 func _ready():
-	$Player/AnimationPlayer.play("Rechts")
+	pass
+
+func reset():
+	self.velocity = Vector2.ZERO
+	self.direction = Vector2.ZERO
+	
+func get_hp():
+	return self._hp
+
+# Returns false if the damage was lethal
+# Otherwise the function returns true
+func take_damge(amount:int):
+	self._hp -= amount * DAMAGE_MULTIPLIER
+	if self._hp <= 0:
+		return false
+	else:
+		return true
+
+func heal(amount: int):
+	self._hp += amount * HEAL_MULTIPLIER
+	if self._hp > self._max_hp:
+		self._hp = self._max_hp
 	
 #Signal handler
 func _on_Coin_collected():
@@ -77,9 +106,9 @@ func jump(delta):
 		if self.is_on_floor() && _jump_value < 0.8:
 			self._jumping = false
 			self._jump_value = 1
-			self.lock = true
-		if self.is_on_ceiling() && self.lock:
-			self.lock = false
+			self._lock = true
+		if self.is_on_ceiling() && self._lock:
+			self._lock = false
 			self._jump_value =  -self._jump_value
 
 func setVelocity():
