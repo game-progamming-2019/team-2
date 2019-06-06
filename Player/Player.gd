@@ -20,6 +20,10 @@ export var coins = 0
 
 #Movement
 var _jump_value: float = 1
+
+var _double_jumped: bool = false
+var _released_jump_button: bool = false
+
 var _state: String
 var _lock = true
 var _in_air: bool
@@ -78,8 +82,11 @@ func getInput():
 		self._is_running = false
 		
 func jump(delta):
-	if self.is_on_floor() && Input.is_key_pressed(KEY_SPACE):
+	if self.is_on_floor() && Input.is_action_pressed("ui_up"):
 		self._jumping = true
+	elif !self._double_jumped  && Input.is_action_just_pressed("ui_up") && self._jump_value < 0.5:
+		self._double_jumped = true
+		self._jump_value = 1
 	if self._jumping == true:
 		# Mathematical function, which is ran from 1 to -1
 		self.direction.y = -pow(SPRUNG_HOEHE * self._jump_value, 1)
@@ -88,6 +95,7 @@ func jump(delta):
 			self._jumping = false
 			self._jump_value = 1
 			self._lock = true
+			self._double_jumped = false
 		if self.is_on_ceiling() && self._lock:
 			self._lock = false
 			self._jump_value =  -self._jump_value
@@ -115,8 +123,6 @@ func applyMovement(delta:float):
 	jump(delta)
 	setVelocity()
 	applyGravity()
-	
-	#print(self.velocity.x)
 	
 	#var snap = Vector2.UP * 32 if !_jumping else Vector2.ZERO
 	#move_and_slide_with_snap(self.velocity, snap, Vector2.UP)
