@@ -17,6 +17,8 @@ export var HEAL_MULTIPLIER: float = 0.5
 export var DAMAGE_MULTIPLIER: float = 0.5
 var _hp: float = 3
 var _max_hp: float = 3
+export var energie = 100
+export var coins = 0
 
 #Movement
 var _jump_value: float = 1
