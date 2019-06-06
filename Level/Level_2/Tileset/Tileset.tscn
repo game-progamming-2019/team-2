@@ -1,0 +1,588 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Level/Level_1/Tileset/tiles_spritesheet.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 35.0129, 35.0224 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( -35, -35, 35, -35, 35, 35, -35, 35 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( -35, 35, 35, 35, 35, -35 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 34.9985, 19.8823 )
+
+[sub_resource type="OccluderPolygon2D" id=5]
+polygon = PoolVector2Array( -35, -20, 35, -20, 35, 20, -35, 20 )
+
+[node name="Tileset" type="Node2D"]
+
+[node name="Gras" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 504, 576, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gras"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gras/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Gras"]
+occluder = SubResource( 2 )
+
+[node name="Erde" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 75.391, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 864, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Erde"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Erde/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Erde"]
+occluder = SubResource( 2 )
+
+[node name="Rampe_hoch" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 152.184, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 144, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rampe_hoch"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rampe_hoch/StaticBody2D"]
+polygon = PoolVector2Array( 35, 35, -35, 35, 35, -35 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rampe_hoch"]
+position = Vector2( -0.184006, 0 )
+occluder = SubResource( 3 )
+
+[node name="Rampe_runter" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 309.858, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 0, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rampe_runter"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rampe_runter/StaticBody2D"]
+rotation = 1.5708
+polygon = PoolVector2Array( 35, 35, -35, 35, 35, -35 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Rampe_runter"]
+rotation = 1.5708
+occluder = SubResource( 3 )
+
+[node name="Pfeil" type="Sprite" parent="."]
+position = Vector2( 234.556, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 292, 216, 63, 70 )
+
+[node name="Exit" type="Sprite" parent="."]
+position = Vector2( 645.634, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 360, 70, 70 )
+
+[node name="Gras_Ebene_Anfang" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 391.603, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 360, 70, 40 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gras_Ebene_Anfang"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gras_Ebene_Anfang/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Gras_Ebene_Anfang"]
+occluder = SubResource( 5 )
+
+[node name="Gras_Ebene_Mitte" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 471.235, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 288, 70, 40 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gras_Ebene_Mitte"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gras_Ebene_Mitte/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Gras_Ebene_Mitte"]
+occluder = SubResource( 5 )
+
+[node name="Gras_Ebene_Ende" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 555.657, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 216, 70, 40 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gras_Ebene_Ende"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gras_Ebene_Ende/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Gras_Ebene_Ende"]
+occluder = SubResource( 5 )
+
+[node name="Rampe_Verbindung_hoch" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 724.888, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 576, 72, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rampe_Verbindung_hoch"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rampe_Verbindung_hoch/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Rampe_Verbindung_hoch"]
+position = Vector2( 0.112, 0 )
+occluder = SubResource( 2 )
+
+[node name="Rampe_Verbindung_runter" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 831.838, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 504, 864, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Rampe_Verbindung_runter"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rampe_Verbindung_runter/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Rampe_Verbindung_runter"]
+occluder = SubResource( 2 )
+
+[node name="Wasser_Oberfläche" type="Sprite" parent="."]
+position = Vector2( 932.215, 0 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, 25 )
+region_enabled = true
+region_rect = Rect2( 432, 601, 70, 45 )
+
+[node name="Wasser" type="Sprite" parent="."]
+position = Vector2( 1014.32, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 504, 216, 70, 70 )
+
+[node name="Platform_Anfang" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1115.23, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 360, 360, 70, 41 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform_Anfang"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_Anfang/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Platform_Anfang"]
+occluder = SubResource( 5 )
+
+[node name="Platform_Mitte" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1199.95, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 360, 288, 70, 41 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform_Mitte"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_Mitte/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="Platform_Mitte"]
+occluder = SubResource( 5 )
+
+[node name="Platform_Ende" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1286.92, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 360, 216, 70, 41 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform_Ende"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_Ende/StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="Platform_Ende"]
+occluder = SubResource( 5 )
+
+[node name="Stein1" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 72, 288, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Stein1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stein1/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Stein1"]
+occluder = SubResource( 2 )
+
+[node name="Gift" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 96, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 72, 360, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gift"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gift/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Gift"]
+occluder = SubResource( 2 )
+
+[node name="Gift2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 187, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 72, 432, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gift2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gift2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Gift2"]
+occluder = SubResource( 2 )
+
+[node name="Gift3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 289, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 72, 504, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gift3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gift3/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Gift3"]
+occluder = SubResource( 2 )
+
+[node name="Gift4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 375, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 72, 720, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gift4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gift4/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Gift4"]
+occluder = SubResource( 2 )
+
+[node name="Gift5" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 471, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 72, 792, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gift5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gift5/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Gift5"]
+occluder = SubResource( 2 )
+
+[node name="Gift6" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 660, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 648, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gift6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gift6/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Gift6"]
+occluder = SubResource( 2 )
+
+[node name="Stein 2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 570, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 504, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Stein 2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stein 2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Stein 2"]
+occluder = SubResource( 2 )
+
+[node name="Stein 3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 570, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 576, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Stein 3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stein 3/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Stein 3"]
+occluder = SubResource( 2 )
+
+[node name="Schnee" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 760, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 720, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schnee"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schnee/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schnee"]
+occluder = SubResource( 2 )
+
+[node name="Schnee2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 760, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 792, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schnee2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schnee2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schnee2"]
+occluder = SubResource( 2 )
+
+[node name="Schnee3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 851, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 864, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schnee3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schnee3/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schnee3"]
+occluder = SubResource( 2 )
+
+[node name="Erde 2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 936, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 216, 0, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Erde 2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Erde 2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Erde 2"]
+occluder = SubResource( 2 )
+
+[node name="Schnee 4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1017, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 216, 144, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schnee 4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schnee 4/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schnee 4"]
+occluder = SubResource( 2 )
+
+[node name="Schnee 5" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1115, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 216, 288, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schnee 5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schnee 5/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schnee 5"]
+occluder = SubResource( 2 )
+
+[node name="Stein 4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1200, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 72, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Stein 4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stein 4/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Stein 4"]
+occluder = SubResource( 2 )
+
+[node name="Schnee 6" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1287, 100 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 144, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schnee 6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schnee 6/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schnee 6"]
+occluder = SubResource( 2 )
+
+[node name="Schokosahne" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 188 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 504, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schokosahne"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schokosahne/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schokosahne"]
+occluder = SubResource( 2 )
+
+[node name="Schokosahne2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 96, 188 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 576, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schokosahne2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schokosahne2/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schokosahne2"]
+occluder = SubResource( 2 )
+
+[node name="Schokosahne3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 187, 188 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 648, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schokosahne3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schokosahne3/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schokosahne3"]
+occluder = SubResource( 2 )
+
+[node name="Schokosahne4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 289, 188 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 864, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schokosahne4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schokosahne4/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schokosahne4"]
+occluder = SubResource( 2 )
+
+[node name="Stein 5" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 375, 188 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 792, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Stein 5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stein 5/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Stein 5"]
+occluder = SubResource( 2 )
+
+[node name="Schokosahne5" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 471, 188 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 360, 792, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Schokosahne5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Schokosahne5/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Schokosahne5"]
+occluder = SubResource( 2 )
+
+[node name="Sand" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 570, 188 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 504, 0, 70, 70 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sand"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sand/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sand"]
+occluder = SubResource( 2 )
+

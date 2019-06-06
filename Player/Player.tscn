@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Player/Flashlight/Flashlight.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/Red - Rectangle.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24.0755, 24.486 )
+
+[node name="Player" type="KinematicBody2D"]
+collision/safe_margin = 0.001
+script = ExtResource( 1 )
+SPEED = 400
+RUNSPEED_MULTIPLIER = 2.0
+GRAVITY = 600
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+shape = SubResource( 1 )
+
+[node name="Taschenlampe" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8.81725, 3.16922 )
+scale = Vector2( 1.48027, 1.54605 )
+z_index = 1
+
+[node name="Player" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
+

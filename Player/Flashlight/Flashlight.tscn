@@ -14,3 +14,5 @@ position = Vector2( 266.16, 1.0148 )
 rotation = -1.5708
 scale = Vector2( 0.713179, 1 )
 texture = ExtResource( 3 )
+shadow_enabled = true
+
