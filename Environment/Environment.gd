@@ -77,6 +77,6 @@ func list_files_in_directory(path):
         if file == "":
             break
         elif not file.begins_with("."):
-            files.push_front(file)
+            files.push_back(file)
     dir.list_dir_end()
     return files
