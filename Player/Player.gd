@@ -12,11 +12,9 @@ export var SPEED: int
 export var ACCELERATION: float = 0.09
 export var RUNSPEED_MULTIPLIER: float
 export var GRAVITY: int
+export var SPRUNG_BREITE: float
+export var SPRUNG_HOEHE: float
 
-export var HEAL_MULTIPLIER: float = 0.5
-export var DAMAGE_MULTIPLIER: float = 0.5
-var _hp: float = 3
-var _max_hp: float = 3
 export var energie = 100
 export var coins = 0
 
@@ -36,23 +34,6 @@ func _ready():
 func reset():
 	self.velocity = Vector2.ZERO
 	self.direction = Vector2.ZERO
-	
-func get_hp():
-	return self._hp
-
-# Returns false if the damage was lethal
-# Otherwise the function returns true
-func take_damge(amount:int):
-	self._hp -= amount * DAMAGE_MULTIPLIER
-	if self._hp <= 0:
-		return false
-	else:
-		return true
-
-func heal(amount: int):
-	self._hp += amount * HEAL_MULTIPLIER
-	if self._hp > self._max_hp:
-		self._hp = self._max_hp
 	
 #Signal handler
 func _on_Coin_collected():
@@ -101,8 +82,8 @@ func jump(delta):
 		self._jumping = true
 	if self._jumping == true:
 		# Mathematical function, which is ran from 1 to -1
-		self.direction.y = -pow(self._jump_value, 1)
-		self._jump_value -= delta 
+		self.direction.y = -pow(SPRUNG_HOEHE * self._jump_value, 1)
+		self._jump_value -= delta * SPRUNG_BREITE
 		if self.is_on_floor() && _jump_value < 0.8:
 			self._jumping = false
 			self._jump_value = 1
