@@ -3,6 +3,6 @@
 [ext_resource path="res://Fonts/TTF/theboldfont.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 90
+size = 25
 font_data = ExtResource( 1 )
 
