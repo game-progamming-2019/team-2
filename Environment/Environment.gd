@@ -10,7 +10,6 @@ var _camera_reference = null
 func _ready():
 	if _iterator < LEVELS.size():
 		load_level("res://Level/" + LEVELS[_iterator] + "/level.tscn")
-	pass
 
 func _process(delta):
 	if !check_if_player_is_outside_of_camera():
@@ -28,6 +27,7 @@ func check_if_player_is_outside_of_camera():
 
 	
 func load_level(scene_name: String):
+	print(scene_name)
 	var level = load(scene_name).instance()
 	attach_camera(level)
 	level.connect("level_complete", self, "on_level_completed")
@@ -77,6 +77,6 @@ func list_files_in_directory(path):
         if file == "":
             break
         elif not file.begins_with("."):
-            files.push_back(file)
+            files.push_front(file)
     dir.list_dir_end()
     return files

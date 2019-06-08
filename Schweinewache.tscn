@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Enemy
+
+func _ready():
+	pass"
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="StreamTexture" id=3]
+load_path = "res://.import/Example - Enemy.png-7d61574a93b4e814d514367e66155a3f.stex"
+
+[node name="Schweinewache" type="Area2D"]
+script = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
+texture = SubResource( 3 )
