@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_spritesheet.png-a57e98fc56da16e3336805b90e5f7db5.stex"
+path="res://.import/Graveyard2.png-20dce0374f1162df5551a41b1ce0d612.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level/Level_1/Tileset/tiles_spritesheet.png"
-dest_files=[ "res://.import/tiles_spritesheet.png-a57e98fc56da16e3336805b90e5f7db5.stex" ]
+source_file="res://Tileset/Graveyard2.png"
+dest_files=[ "res://.import/Graveyard2.png-20dce0374f1162df5551a41b1ce0d612.stex" ]
 
 [params]
 

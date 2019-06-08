@@ -16,3 +16,11 @@ scale = Vector2( 0.713179, 1 )
 texture = ExtResource( 3 )
 shadow_enabled = true
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 8.44643, -7.62939e-06 )
+scale = Vector2( 1.12982, 1 )
+polygon = PoolVector2Array( 16.1322, 4.75359, 372.241, 85.4303, 370.133, -82.8642, 15.9309, -2.75456 )
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
