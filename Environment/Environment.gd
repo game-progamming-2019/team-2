@@ -5,6 +5,7 @@ extends Node2D
 var LEVELS = list_files_in_directory("res://Level")
 var _current_level = null
 var _iterator: int = 0
+var completed_levels: int = 0
 var _camera_reference = null
 
 func _ready():
@@ -16,6 +17,9 @@ func _process(delta):
 		death()
 
 func death():
+	
+	print("Highscore: " + String($Player.getCoins() * 5 + $Player/Flashlight.getEnergy() * 2 + completed_levels * 100))
+	
 	get_tree().reload_current_scene()
 	#$Player.reset()
 	
@@ -27,21 +31,26 @@ func check_if_player_is_outside_of_camera():
 
 	
 func load_level(scene_name: String):
-	print(scene_name)
 	var level = load(scene_name).instance()
 	attach_camera(level)
 	level.connect("level_complete", self, "on_level_completed")
 	self._current_level = level
+	if level.NACHT:
+		$CanvasModulate.visible = true
+	else:
+		$CanvasModulate.visible = false
 	self.add_child(level)
 	
 func on_level_completed():
 	
 	self._iterator += 1 
+	self.completed_levels += 1
 	
 	reset_player()
 	detach_camera()
-	
+
 	self._current_level.queue_free()
+	
 	if _iterator >= LEVELS.size():
 		print("Looping levels")
 		_iterator = 0

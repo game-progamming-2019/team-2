@@ -15,9 +15,14 @@ export var GRAVITY: int
 export var SPRUNG_BREITE: float
 export var SPRUNG_HOEHE: float
 
-export var energie = 100
-export var coins = 0
+var coins: int
 
+func addCoin():
+	self.coins += 1
+	
+func getCoins():
+	return self.coins
+	
 #Movement
 var _jump_value: float = 1
 
@@ -35,6 +40,10 @@ var _jumping: bool = false
 func _ready():
 	pass
 
+func _physics_process(delta):
+	self._in_air = !self.is_on_floor()
+	applyMovement(delta)
+	
 func reset():
 	self.velocity = Vector2.ZERO
 	self.direction = Vector2.ZERO
@@ -129,9 +138,4 @@ func applyMovement(delta:float):
 	
 	move_and_slide(self.velocity, Vector2.UP)
 	emit_signal("Player_position", self.position)
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
-	self._in_air = !self.is_on_floor()
-	applyMovement(delta)
 	
