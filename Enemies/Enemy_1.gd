@@ -3,9 +3,9 @@ extends Enemy
 export var speed = 100
 export var distance = 100
 
-var old_distance
-var old_position
-var stop_position
+var old_distance = Vector2(0,0)
+var old_position = Vector2(0,0)
+var stop_position = Vector2(0,0)
 var direction = Vector2(1,0)
 var tween
 var stuned = false
