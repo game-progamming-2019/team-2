@@ -27,9 +27,9 @@ func _process(delta):
 	$Area2D/CollisionPolygon2D.disabled = !on
 
 func _on_Area2D_area_entered(area):
-	print ("entered")
+	
 	if area.has_method("on_flashlight_start") and on :
-		print ("method")
+		
 		area.on_flashlight_start()
 
 

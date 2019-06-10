@@ -45,5 +45,5 @@ position = Vector2( 2657.9, 62.86 )
 shape = SubResource( 2 )
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 589.442, 449.776 )
+position = Vector2( 580, 450 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
