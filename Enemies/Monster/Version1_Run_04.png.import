@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG.png-c00a88d9089ecdb73c06984e8bbe6595.stex"
+path="res://.import/Version1_Run_04.png-1525a07f34fcaaf5a35cd7af5eeb23f6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level/Level_1/BG.png"
-dest_files=[ "res://.import/BG.png-c00a88d9089ecdb73c06984e8bbe6595.stex" ]
+source_file="res://Enemies/Monster/Version1_Run_04.png"
+dest_files=[ "res://.import/Version1_Run_04.png-1525a07f34fcaaf5a35cd7af5eeb23f6.stex" ]
 
 [params]
 
