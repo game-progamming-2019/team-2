@@ -26,6 +26,7 @@ func _process(delta):
 	self.rotation_degrees = self.get_parent().position.angle_to_point(get_global_mouse_position()) * 180/PI - 180
 
 func _on_Area2D_area_entered(area):
+	print ("entered")
 	if area.has_method("on_flashlight_start"):
 		area.on_flashlight_start()
 
