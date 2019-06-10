@@ -26,17 +26,8 @@ func on_flashlight_end():
 	stuned = false 
 	was_stuned = true 
 	
-	#if position.y > old_position.y:
-	#	direction.y = -1
-	#else:
-		#direction.y = 0
 	direction = old_position - stop_position
-	print("Old: "+ String(old_position))
-	print("Stop: "+ String(stop_position))
-	print("POW: " + String(pow(old_position.x - stop_position.x,2) + pow(old_position.y - stop_position.y,2)))
 	distance =  sqrt(pow(old_position.x - stop_position.x,2) + pow(old_position.y - stop_position.y,2))
-	#distance = old_position.dot(stop_position)
-	print(distance)
 	direction = direction.normalized()
 		
 	_start_tween()
@@ -70,22 +61,11 @@ func _on_Tween_tween_completed(object, key):
 
 func _on_Enemy_body_shape_entered(body_id, body, body_shape, area_shape):
 	
-	old_distance = distance
-	stop_position = position 
-	tween.stop_all()
+	if body.name != "Player":
+		old_distance = distance
+		stop_position = position 
+		tween.stop_all()
 	
-func _process(delta):
-	#if position.y == old_position.y and was_stuned :
-	#	was_stuned = false
-	#	tween.stop_all()
-		
-	#	direction = Vector2(-1,0)
-	#	distance = position.x - old_position.x
-	#	_start_tween()
-		
-	#if position.x == old_position.x :
-	#	tween.stop_all()
-	pass
 
 func _ready():
 	old_position = position
