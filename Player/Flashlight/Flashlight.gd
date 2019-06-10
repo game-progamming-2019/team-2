@@ -24,10 +24,12 @@ func _process(delta):
 	toggle(delta)
 	$Light2D.enabled = self.on
 	self.rotation_degrees = self.get_parent().position.angle_to_point(get_global_mouse_position()) * 180/PI - 180
+	$Area2D/CollisionPolygon2D.disabled = !on
 
 func _on_Area2D_area_entered(area):
 	print ("entered")
-	if area.has_method("on_flashlight_start"):
+	if area.has_method("on_flashlight_start") and on :
+		print ("method")
 		area.on_flashlight_start()
 
 

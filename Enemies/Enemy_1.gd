@@ -5,15 +5,10 @@ export var distance = 100
 var direction = Vector2(1,0)
 var tween
 
-var enemy: Enemy
 
-func _init(e:Enemy):
-	enemy = e
-	
 func on_flashlight_start():
 	
-	direction= Vector2(0,1)
-	
+	direction= Vector2(0,-1)
 	print("on_flashlight_start() has not been overwritten")
 
 
