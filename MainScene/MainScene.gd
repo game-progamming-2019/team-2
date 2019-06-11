@@ -8,3 +8,9 @@ func _on_Menu_start():
 	add_child(welt)
 	print("Laden")
 
+
+
+func _on_Menu_credits():
+	var welt = load("res://Credits/Credits.tscn").instance()
+	add_child(welt)
+	

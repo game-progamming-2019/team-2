@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Startmenu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Startmenu/BG.png" type="Texture" id=2]
 [ext_resource path="res://Startmenu/play_normal.png" type="Texture" id=3]
 [ext_resource path="res://Startmenu/Start.gd" type="Script" id=4]
 [ext_resource path="res://Startmenu/credits_normal.png" type="Texture" id=5]
-[ext_resource path="res://Startmenu/quit_normal.png" type="Texture" id=6]
-[ext_resource path="res://Startmenu/Quit.gd" type="Script" id=7]
+[ext_resource path="res://Startmenu/Credits.gd" type="Script" id=6]
+[ext_resource path="res://Startmenu/quit_normal.png" type="Texture" id=7]
+[ext_resource path="res://Startmenu/Quit.gd" type="Script" id=8]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource( 1 )
@@ -32,14 +33,16 @@ margin_right = 662.481
 margin_bottom = 392.325
 icon = ExtResource( 5 )
 flat = true
+script = ExtResource( 6 )
 
 [node name="Quit" type="Button" parent="."]
 margin_left = 395.0
 margin_top = 422.0
 margin_right = 616.0
 margin_bottom = 524.0
-icon = ExtResource( 6 )
+icon = ExtResource( 7 )
 flat = true
-script = ExtResource( 7 )
+script = ExtResource( 8 )
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_Quit_pressed"]

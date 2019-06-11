@@ -13,6 +13,7 @@ func _ready():
 	pass 
 	
 func _process(delta):
+	$Area2D/CollisionPolygon2D.disabled=!on
 	toggle(delta)
 	drainBattery(delta)
 	$Light2D.enabled = self.on
@@ -57,10 +58,10 @@ func is_on():
 	return self.on
 
 func _on_Area2D_area_entered(area):
-	if area.has_method("in_flashlight_start"):
-		area.in_flashlight_start()
+	if area.has_method("on_flashlight_start"):
+		area.on_flashlight_start()
 
 
 func _on_Area2D_area_exited(area):
-	if area.has_method("in_flashlight_end"):
-		area.in_flashlight_end()
+	if area.has_method("on_flashlight_end"):
+		area.on_flashlight_end()
