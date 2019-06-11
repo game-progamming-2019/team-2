@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tileset/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Level/Level_1/background.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = 5
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( 131061, 9, 0, 131062, 9, 0, 196599, 9, 0, 196600, 9, 0, 196601, 9, 0, 196602, 9, 0, 196603, 9, 0, 196604, 9, 0, 196605, 9, 0, 196606, 9, 0, 196607, 9, 0, 131072, 9, 0, 131073, 9, 0, 131074, 9, 0, 131075, 9, 0, 131076, 9, 0, 131077, 9, 0, 131078, 9, 0, 131079, 9, 0, 131080, 9, 0, 131081, 9, 0, 131082, 9, 0, 131083, 9, 0, 131084, 9, 0, 131085, 9, 0, 131086, 9, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -224.935, 195.398 )
+z_index = 5
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 172.245, -262.703 )
+scale = Vector2( 2.78038, 1.669 )
+texture = ExtResource( 3 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 205.19, 230.337 )
+z_index = 5
+distance = 2000
