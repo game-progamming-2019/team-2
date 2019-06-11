@@ -1,36 +1,36 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://Graveyard2.png" type="Texture" id=1]
+[ext_resource path="res://Tileset/Graveyard2.png" type="Texture" id=1]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 63.8655, 63.6583 )
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( -58.3417, -64.1451, 64.2117, -63.9123, 63.9501, 63.8888, -64.0597, 63.8301, -60.0018, 48.4582, -61.8463, 30.3084, -56.1283, 15.1217, -61.8463, -0.805703, -57.7884, -17.8444, -60.5552, -33.7718, -64.2442, -36.9203, -64.2442, -55.0701 )
 
-[sub_resource type="OccluderPolygon2D" id=2]
-polygon = PoolVector2Array( -57.2911, -63.9014, 64.2117, -63.9123, 63.9501, 63.8888, -64.0597, 63.8301, -60.0018, 48.4582, -61.8463, 30.3084, -56.1283, 15.1217, -61.8463, -0.805703, -57.7884, -17.8444, -60.5552, -33.7718, -64.2442, -36.9203, -64.2442, -55.0701 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 64.047, 63.6609 )
 
 [sub_resource type="OccluderPolygon2D" id=3]
-polygon = PoolVector2Array( -64.0073, -63.9688, 64.0346, -63.9838, 63.9541, 64.042, -64.0944, 63.8911 )
+polygon = PoolVector2Array( -64.0712, -64.0033, 64.0346, -63.9838, 63.9541, 64.042, -64.0944, 63.8911 )
 
 [sub_resource type="OccluderPolygon2D" id=4]
-polygon = PoolVector2Array( -64.2647, -63.894, 58.6149, -63.8896, 64.047, -54.9166, 64.047, -33.9794, 57.5635, -20.0799, 62.1194, -1.78188, 55.8112, 15.6364, 61.0681, 28.1284, 60.5424, 46.4264, 63.8717, 63.6688, -64.0458, 63.6688 )
+polygon = PoolVector2Array( -64.0458, -64.0656, 58.6149, -63.8896, 64.047, -54.9166, 64.047, -33.9794, 57.5635, -20.0799, 62.1194, -1.78188, 55.8112, 15.6364, 61.0681, 28.1284, 60.5424, 46.4264, 63.8717, 63.6688, -64.0458, 63.6688 )
 
 [sub_resource type="OccluderPolygon2D" id=5]
-polygon = PoolVector2Array( -64.0589, -64.2865, 64.0868, -63.7017, 64.281, 63.6009, -64.0589, 63.7959 )
+polygon = PoolVector2Array( -65.219, -63.6641, 66.3264, -63.3548, 65.4023, 62.8489, -64.6028, 62.8489 )
 
 [sub_resource type="OccluderPolygon2D" id=6]
-polygon = PoolVector2Array( -64.4119, -63.8624, 64.0132, -63.8422, 64.1503, 63.4103, -64.1177, 63.4103 )
+polygon = PoolVector2Array( -66.2279, -63.3548, 65.3175, -63.6641, 64.7014, 64.0862, -65.3037, 63.7769 )
 
 [sub_resource type="OccluderPolygon2D" id=7]
-polygon = PoolVector2Array( -58.5035, -63.5706, 64.1219, -63.5706, 64.1219, 27.5735, 34.2618, 27.1737, -3.9591, 9.18475, -16.3013, -7.60495, -47.3558, -12.0022, -60.096, -32.7895, -64.0774, -40.3848, -64.0774, -54.776 )
+polygon = PoolVector2Array( -61.8373, -62.8218, 63.9352, -62.7442, 63.9352, 28.8825, 34.2618, 27.1737, -3.9591, 9.18475, -16.3013, -7.60495, -47.3558, -12.0022, -60.096, -32.7895, -64.0774, -40.3848, -64.0774, -54.776 )
 
 [sub_resource type="OccluderPolygon2D" id=8]
-polygon = PoolVector2Array( -64.2084, -63.2072, 64.0138, -63.2072, 64.2647, 28.7528, 37.6667, 22.7061, 3.03923, 29.0047, -25.5661, 21.4464, -63.9575, 29.2567 )
+polygon = PoolVector2Array( -66.5532, -63.443, 65.2349, -64.1845, 65.8511, 28.303, 36.2765, 22.4259, 5.77765, 28.303, -24.7212, 20.8793, -65.7191, 29.2393 )
 
 [sub_resource type="OccluderPolygon2D" id=9]
-polygon = PoolVector2Array( -63.9737, -63.9671, 64.2647, -63.9631, 64.172, -55.7587, 63.7632, -34.622, 54.3618, -16.9739, 17.9823, -8.76542, 8.3765, 6.21498, -32.9081, 26.5309, -63.7693, 29.4038 )
+polygon = PoolVector2Array( -64.5774, -63.712, 61.2175, -64.028, 64.172, -55.7587, 63.7632, -34.622, 54.3618, -16.9739, 17.9823, -8.76542, 8.3765, 6.21498, -32.9081, 26.5309, -65.2199, 30.095 )
 
 [sub_resource type="OccluderPolygon2D" id=10]
-polygon = PoolVector2Array( -64.3003, -63.8776, 63.8386, -63.8819, 63.8386, 63.7229, -64.1712, 63.7229, -53.4729, 35.3869, -62.5111, 4.27278, -59.0065, -41.1019 )
+polygon = PoolVector2Array( -64.3556, -64.2523, 63.8386, -63.8819, 63.8386, 63.7229, -64.1712, 63.7229, -53.4729, 35.3869, -62.5111, 4.27278, -59.0065, -41.1019 )
 
 [sub_resource type="OccluderPolygon2D" id=11]
 polygon = PoolVector2Array( -63.7162, -63.7443, 63.7532, -63.7443, 63.7532, 63.4879, -63.9671, 63.4879 )
@@ -39,22 +39,28 @@ polygon = PoolVector2Array( -63.7162, -63.7443, 63.7532, -63.7443, 63.7532, 63.4
 polygon = PoolVector2Array( -63.9671, -63.7443, 63.7532, -63.7443, 58.9856, -36.5343, 62.7495, -0.254171, 52.9635, 29.2234, 64.255, 63.7399, -63.9671, 63.7399 )
 
 [sub_resource type="OccluderPolygon2D" id=13]
-polygon = PoolVector2Array( -63.5856, -63.5042, 62.6139, -63.5042, 63.6592, 63.556, -63.4647, 63.1456 )
-
-[sub_resource type="OccluderPolygon2D" id=16]
-polygon = PoolVector2Array( -63.5124, -63.3936, 63.6114, -63.3936, 63.6114, 63.0163, -63.5124, 63.4268 )
-
-[sub_resource type="OccluderPolygon2D" id=17]
-polygon = PoolVector2Array( -63.7168, -63.5988, 63.6114, -63.5988, 63.8158, 57.0652, 44.3998, 63.0163, 23.1444, 60.1434, 1.68456, 63.632, -31.4249, 56.4496, -48.3883, 63.4268, -63.9211, 56.86 )
+polygon = PoolVector2Array( -65.4466, -63.927, 64.885, -62.5917, 66.2149, 63.5967, -65.4466, 62.2614 )
 
 [sub_resource type="OccluderPolygon2D" id=14]
-polygon = PoolVector2Array( -63.9671, -64.2482, 64.0041, -63.7443, 63.9827, 56.6761, 42.7259, 63.4812, 28.5547, 60.388, 2.36888, 64.0999, -28.6948, 58.2535, -50.619, 62.2439, -53.1283, 43.8223, -61.0333, 32.2774, -56.7215, -17.51 )
-
-[sub_resource type="OccluderPolygon2D" id=18]
-polygon = PoolVector2Array( -63.8829, -64.0654, 63.7982, -64.0654, 63.9646, 63.801, -63.8829, 63.801 )
+polygon = PoolVector2Array( -63.8443, -63.6203, 63.8743, -63.5387, 64.1523, 62.9224, -63.4644, 63.4807 )
 
 [sub_resource type="OccluderPolygon2D" id=15]
+polygon = PoolVector2Array( -63.7791, -63.2173, 63.0894, -63.2062, 63.5318, 55.8599, 41.8731, 64.6117, 23.6481, 59.5728, 2.25354, 64.0813, -29.7063, 56.9207, -45.5541, 61.164, -64.3074, 56.3903 )
+
+[sub_resource type="OccluderPolygon2D" id=16]
+polygon = PoolVector2Array( -63.2324, -63.4551, 63.8109, -63.396, 63.6065, 63.4243, -63.9261, 63.6295 )
+
+[sub_resource type="OccluderPolygon2D" id=17]
+polygon = PoolVector2Array( -63.8978, -63.6853, 64.0325, -63.6853, 63.9225, 63.5627, -63.8584, 63.8802 )
+
+[sub_resource type="OccluderPolygon2D" id=18]
+polygon = PoolVector2Array( -63.9671, -64.2482, 64.0041, -63.7443, 63.9827, 56.6761, 42.7259, 63.4812, 28.5547, 60.388, 2.36888, 64.0999, -28.6948, 58.2535, -50.619, 62.2439, -53.1283, 43.8223, -61.0333, 32.2774, -56.7215, -17.51 )
+
+[sub_resource type="OccluderPolygon2D" id=19]
 polygon = PoolVector2Array( -63.9078, -64.0505, 64.0088, -63.6897, 59.697, -44.9292, 62.5715, -31.2196, 56.1039, -14.9846, 60.775, -4.16123, 58.2598, 20.3717, 60.775, 32.2774, 51.4327, 43.1008, 53.948, 53.9241, 44.9651, 63.6651, 20.8909, 55.0065, -6.41717, 64.0259, -63.9078, 56.8104 )
+
+[sub_resource type="OccluderPolygon2D" id=20]
+polygon = PoolVector2Array( -63.6691, -63.3084, 65.2429, -63.49, 64.1223, 29.1595, 36.2608, 23.1775, 5.24518, 29.6873, -24.5439, 22.2977, -64.0574, 28.4926 )
 
 [node name="Tileset" type="Node2D"]
 
@@ -68,16 +74,15 @@ region_rect = Rect2( 1152, 0, 128, 128 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Dunkel Gras links voll"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dunkel Gras links voll/StaticBody2D"]
-shape = SubResource( 1 )
-disabled = true
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Dunkel Gras links voll/StaticBody2D"]
+polygon = PoolVector2Array( -58.2867, -63.4727, 63.9095, -63.6728, 63.6906, 63.5598, -63.6188, 63.5598, -58.6435, 49.1608, -56.3022, 14.4857, -57.1802, -17.8385, -63.9115, -37.8207, -63.6188, -54.5705 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Dunkel Gras links voll"]
-occluder = SubResource( 2 )
+occluder = SubResource( 1 )
 
 [node name="Dunkel Gras mitte voll" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 144.627, 1.62679 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -86,15 +91,14 @@ region_rect = Rect2( 1280, 0, 128, 128 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Dunkel Gras mitte voll"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dunkel Gras mitte voll/StaticBody2D"]
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Dunkel Gras mitte voll"]
 occluder = SubResource( 3 )
 
 [node name="Dunkel Gras rechts voll" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 285.627, 1.62679 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -104,33 +108,31 @@ region_rect = Rect2( 0, 128, 128, 128 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dunkel Gras rechts voll/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Dunkel Gras rechts voll"]
 occluder = SubResource( 4 )
 
 [node name="Dunkel Gras nach oben rechts" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 423.627, 1.62679 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 512, 128, 128, 128 )
+region_rect = Rect2( 512, 128, 128, 127.207 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Dunkel Gras nach oben rechts"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dunkel Gras nach oben rechts/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Dunkel Gras nach oben rechts"]
 occluder = SubResource( 5 )
 
 [node name="Dunkel Gras nach oben links" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 567.627, 1.62679 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -140,70 +142,69 @@ region_rect = Rect2( 1024, 128, 128, 128 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dunkel Gras nach oben links/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Dunkel Gras nach oben links"]
 occluder = SubResource( 6 )
 
 [node name="Dunkel Gras klein links" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 706.627, 1.62679 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 0, 256, 128, 128 )
+region_rect = Rect2( 0, 256.866, 128, 94.7549 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Dunkel Gras klein links"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dunkel Gras klein links/StaticBody2D"]
-position = Vector2( 7.51019e-006, -0.175942 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 1 )
-disabled = true
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Dunkel Gras klein links/StaticBody2D"]
+position = Vector2( -0.194153, -2.51534 )
+polygon = PoolVector2Array( -57.9687, -44.5304, 64.3857, -44.5518, 64.4984, 47.4006, 33.9968, 46.3361, -4.25275, 27.6209, -18.8147, 10.6602, -45.6088, 6.17631, -64.4424, -20.5319, -63.4716, -35.3481 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Dunkel Gras klein links"]
+position = Vector2( -0.238342, 16.7544 )
 occluder = SubResource( 7 )
 
 [node name="Dunkel Gras klein mitte" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 849.627, 1.62679 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 128, 256, 128, 128 )
+region_rect = Rect2( 128, 256.458, 128, 95.1628 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Dunkel Gras klein mitte"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dunkel Gras klein mitte/StaticBody2D"]
-position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Dunkel Gras klein mitte/StaticBody2D"]
+polygon = PoolVector2Array( -64.5121, -47.2146, 64.08, -47.2634, 64.677, 44.4669, 39.5078, 37.7082, 4.6806, 45.6423, -23.7079, 38.0021, -64.0134, 44.942 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Dunkel Gras klein mitte"]
+visible = false
+position = Vector2( -0.924194, 16.7034 )
 occluder = SubResource( 8 )
 
 [node name="Dunkel Gras klein rechts2" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 989.963, 1.62679 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 256, 256, 128, 128 )
+region_rect = Rect2( 256, 256.813, 128, 94.8073 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Dunkel Gras klein rechts2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dunkel Gras klein rechts2/StaticBody2D"]
-position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Dunkel Gras klein rechts2/StaticBody2D"]
+position = Vector2( -992.256, -1.78432 )
+scale = Vector2( 1.00232, 1.0064 )
+polygon = PoolVector2Array( 925.937, -45.1194, 1047.94, -45.0173, 1053.94, -36.9465, 1053.94, -18.8124, 1044.11, 1.16576, 1006, 8.23497, 996.468, 25.7543, 954.975, 45.7325, 926.083, 47.884 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Dunkel Gras klein rechts2"]
+position = Vector2( -1.23224, 17.3221 )
 occluder = SubResource( 9 )
 
 [node name="Gras links voll" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 1.62677, 141.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -212,15 +213,14 @@ region_rect = Rect2( 384, 256, 128, 128 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Gras links voll"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gras links voll/StaticBody2D"]
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Gras links voll"]
-occluder = SubResource( 2 )
+occluder = SubResource( 1 )
 
 [node name="Gras mitte voll" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 144.627, 143.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -229,15 +229,14 @@ region_rect = Rect2( 512, 256, 128, 128 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Gras mitte voll"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gras mitte voll/StaticBody2D"]
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Gras mitte voll"]
 occluder = SubResource( 3 )
 
 [node name="Gras rechts voll" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 286.627, 143.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -247,69 +246,65 @@ region_rect = Rect2( 640, 256, 128, 128 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gras rechts voll/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Gras rechts voll"]
 occluder = SubResource( 4 )
 
 [node name="Erde Links voll" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 1.62677, 284.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 768, 256, 128, 128 )
+region_rect = Rect2( 769.605, 256, 126.395, 127.531 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Erde Links voll"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Erde Links voll/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Erde Links voll"]
 occluder = SubResource( 10 )
 
 [node name="Erde voll " type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 142.627, 282.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 896, 256, 128, 128 )
+region_rect = Rect2( 896, 256, 128, 126.937 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Erde voll "]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Erde voll /StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Erde voll "]
 occluder = SubResource( 11 )
 
 [node name="Erde rechts voll" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 284.627, 280.574 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 1024, 256, 127.6, 128 )
+region_rect = Rect2( 1024, 256, 126.894, 128 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Erde rechts voll"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Erde rechts voll/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Erde rechts voll"]
 occluder = SubResource( 12 )
 
 [node name="Gras nach oben rechts" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 424.627, 143.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -319,17 +314,14 @@ region_rect = Rect2( 1152, 256, 128, 128 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gras nach oben rechts/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Gras nach oben rechts"]
-position = Vector2( 0, 1.19209e-007 )
-scale = Vector2( 1, 1 )
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Gras nach oben rechts/StaticBody2D"]
 occluder = SubResource( 13 )
 
 [node name="Erde nach rechts oben2" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 428.627, 283.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -339,15 +331,14 @@ region_rect = Rect2( 1280, 256, 128, 128 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Erde nach rechts oben2/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Erde nach rechts oben2"]
-occluder = SubResource( 16 )
+occluder = SubResource( 14 )
 
 [node name="Erde unten frei" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 2.03458, 1.62679 )
+position = Vector2( 572.627, 284.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -357,15 +348,14 @@ region_rect = Rect2( 0, 384, 128, 128 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Erde unten frei/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Erde unten frei"]
-occluder = SubResource( 17 )
+occluder = SubResource( 15 )
 
 [node name="Erde nach links oben" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 717.627, 284.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -375,15 +365,14 @@ region_rect = Rect2( 128, 384, 128, 128 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Erde nach links oben/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Erde nach links oben"]
-occluder = SubResource( 14 )
+occluder = SubResource( 16 )
 
 [node name="Gras nach oben links" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 565.627, 141.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -392,70 +381,66 @@ region_rect = Rect2( 256, 384, 128, 128 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Gras nach oben links"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gras nach oben links/StaticBody2D"]
-position = Vector2( 0.017504, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+position = Vector2( 7.56979e-006, -0.175942 )
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Gras nach oben links"]
-occluder = SubResource( 18 )
+occluder = SubResource( 17 )
 
 [node name="Erde unten links frei" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 861.627, 283.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 384.514, 384, 127.486, 128 )
+region_rect = Rect2( 384.631, 384, 127.369, 128 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Erde unten links frei"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Erde unten links frei/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Erde unten links frei"]
-occluder = SubResource( 14 )
+occluder = SubResource( 18 )
 
 [node name="Erde unten rechts frei2" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 1005.63, 285.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 512, 384, 127.612, 128 )
+region_rect = Rect2( 512, 384, 127.513, 128 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Erde unten rechts frei2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Erde unten rechts frei2/StaticBody2D"]
 position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Erde unten rechts frei2"]
-occluder = SubResource( 15 )
+occluder = SubResource( 19 )
 
 [node name="Gras klein links" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 709.627, 142.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 640, 384, 128, 128 )
+region_rect = Rect2( 640.415, 385.976, 129.585, 126.024 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Gras klein links"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gras klein links/StaticBody2D"]
-position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Gras klein links/StaticBody2D"]
+position = Vector2( 0, -0.175934 )
+polygon = PoolVector2Array( -60.1035, -62.6089, 63.7488, -62.6089, 64.2482, 29.3212, 30.4552, 26.9812, -4.17017, 8.92944, -16.8218, -6.94939, -47.7848, -12.1309, -64.4316, -39.7099, -63.5993, -54.9202 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Gras klein links"]
 occluder = SubResource( 7 )
 
 [node name="Gras klein mitte" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+position = Vector2( 852.627, 142.627 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -463,28 +448,38 @@ region_rect = Rect2( 768, 384, 128, 128 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Gras klein mitte"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gras klein mitte/StaticBody2D"]
-position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Gras klein mitte/StaticBody2D"]
+visible = false
+position = Vector2( 0, -0.175934 )
+polygon = PoolVector2Array( -64.1857, -63.5365, 64.5907, -63.6366, 65.4955, 30.0851, 36.1979, 23.0441, 3.62012, 30.1895, -26.9018, 22.5677, -65.1384, 29.0504 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Gras klein mitte/StaticBody2D"]
+position = Vector2( 0, -0.175934 )
+polygon = PoolVector2Array( 64, -62, -63, -63, -63.2386, 29.0996, -25.2704, 21.6878, 8.23352, 24.1257, 37.3162, 21.6878, 62.9072, 26.5749 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Gras klein mitte"]
+occluder = SubResource( 20 )
+
+[node name="Gras klein rechts" type="Sprite" parent="Gras klein mitte"]
+editor/display_folded = true
+position = Vector2( 142.329, 2.01279 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 896, 384.58, 126.838, 127.853 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Gras klein mitte/Gras klein rechts"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Gras klein mitte/Gras klein rechts/StaticBody2D"]
+position = Vector2( 0, -0.175934 )
+polygon = PoolVector2Array( -64.1144, -63.4441, 59.871, -63.6029, 63.8247, -55.6635, 63.8247, -34.5447, 54.8104, -16.9192, 17.9626, -8.18579, 8.474, 7.21667, -33.9088, 27.8592, -63.3237, 29.9234 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Gras klein mitte/Gras klein rechts"]
 occluder = SubResource( 9 )
 
-[node name="Gras klein rechts" type="Sprite" parent="."]
-editor/display_folded = true
-position = Vector2( 1.62677, 1.62679 )
+[node name="Schild" type="Sprite" parent="."]
+position = Vector2( 144.627, -155.373 )
 scale = Vector2( 0.997689, 0.993645 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 896, 384, 128, 128 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Gras klein rechts"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gras klein rechts/StaticBody2D"]
-position = Vector2( 7.56979e-006, -0.175942 )
-shape = SubResource( 1 )
-disabled = true
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Gras klein rechts"]
-occluder = SubResource( 9 )
+region_rect = Rect2( 881, -35, 128, 128 )
