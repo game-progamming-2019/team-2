@@ -4,13 +4,13 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_Menu_start():
-	var welt = load("res://Environment/Environment.tscn").instance()
-	add_child(welt)
+	var game = load("res://Environment/Environment.tscn").instance()
+	add_child(game)
 	print("Laden")
 
 
 
 func _on_Menu_credits():
-	var welt = load("res://Credits/Credits.tscn").instance()
-	add_child(welt)
+	var start = load("res://Credits/Credits.tscn").instance()
+	add_child(start)
 	

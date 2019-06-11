@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Enemy",
 "language": "GDScript",
 "path": "res://Enemies/Enemy.gd"
+}, {
+"base": "Button",
+"class": "Quit",
+"language": "GDScript",
+"path": "res://Startmenu/Quit.gd"
 } ]
 _global_script_class_icons={
-"Enemy": ""
+"Enemy": "",
+"Quit": ""
 }
 
 [application]

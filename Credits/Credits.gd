@@ -1,6 +1,5 @@
-extends Button
+extends Node2D
 
-class_name Quit
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -13,8 +12,8 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_Quit_pressed():
-	print("Quit")
-	get_tree().quit()
-	pass # Replace with function body.
+func _on_Back_back():
+	var start = load("res://Startmenu/Menu.tscn").instance()
+	add_child(start)
+	print("Laden")
+	
