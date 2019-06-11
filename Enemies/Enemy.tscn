@@ -40,7 +40,6 @@ animations = [ {
 
 [node name="Enemy" type="Area2D"]
 script = ExtResource( 1 )
-distance = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -20.6777, -37.4783 )
@@ -49,7 +48,8 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Walk"
-frame = 3
+frame = 12
 speed_scale = 8.0
 playing = true
+
 [connection signal="body_shape_entered" from="." to="." method="_on_Enemy_body_shape_entered"]

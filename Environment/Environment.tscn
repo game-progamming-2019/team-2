@@ -26,3 +26,4 @@ margin_bottom = -307.497
 [node name="StaticCamera" type="Camera2D" parent="."]
 zoom = Vector2( 2, 2 )
 smoothing_enabled = true
+

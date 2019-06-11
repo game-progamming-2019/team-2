@@ -438,3 +438,4 @@ polygon = PoolVector2Array( -63.9737, -63.9671, 60.0844, -63.9671, 64.172, -55.7
 "shape_transform": Transform2D( 1, 0, 0, 1, 64, 63.8241 )
 } ]
 23/z_index = 0
+
