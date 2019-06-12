@@ -1,10 +1,9 @@
-extends Button
+extends Node2D
 
-class_name Quit
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+signal back
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -14,7 +13,8 @@ func _ready():
 #	pass
 
 
-func _on_Quit_pressed():
-	print("Quit")
-	get_tree().quit()
+func _on_Back_back():
+	emit_signal("back")
+	print("back")
+	queue_free()
 	pass # Replace with function body.
